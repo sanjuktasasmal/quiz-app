@@ -1,0 +1,131 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 420px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.quiz-box {
+  text-align: left;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/*  Base button look */
+.options button {
+  background: #f8f9fa;
+  border: 2px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: left;
+  font-size: 16px;
+  color: #222; /* always visible */
+  font-weight: 500;
+}
+
+/*  Hover effect */
+.options button:hover {
+  background: #d0f0e0;
+  border-color: #74ebd5;
+}
+
+/*  Selected answer — clearly visible (text white, bg dark) */
+.options button.selected {
+  background: #0077ff;
+  color: white;
+  border-color: #0077ff;
+}
+
+/*  Correct answer — green highlight */
+.options button.correct {
+  background: #2ecc71;
+  color: white;
+  border-color: #27ae60;
+}
+
+/*  Wrong answer — red highlight */
+.options button.incorrect {
+  background: #e74c3c;
+  color: white;
+  border-color: #c0392b;
+}
+
+/*  Result area */
+.result-box {
+  padding: 20px;
+}
+
+.result-box h2 {
+  color: #222;
+}
+
+.result-box button {
+  margin-top: 15px;
+  background: #74ebd5;
+  color: #222;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.result-box button:hover {
+  background: #5ad0c4;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nav-buttons button {
+  background: #0077ff;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.nav-buttons button:hover {
+  background: #005fcc;
+}
+
+.nav-buttons button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
